@@ -1,0 +1,22 @@
+{
+  "name": "clicky-game",
+  "version": "1.0.0",
+  "description": "A memory game for fellow 90's kids.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/btburns10/Clicky-Game.git"
+  },
+  "author": "Brendan Burns",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/btburns10/Clicky-Game/issues"
+  },
+  "homepage": "https://github.com/btburns10/Clicky-Game#readme",
+  "dependencies": {
+    "npm": "^6.4.1"
+  }
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Bugs Bunny",
+    "image": "/images/bugs-bunny.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Bupkus",
+    "image": "/images/bupkus.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Daffy Duck",
+    "image": "/images/daffy-duck.png"
+  },
+  {
+    "id": 4,
+    "name": "Elmer Fudd",
+    "image": "/images/elmer-fudd.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Lola Bunny",
+    "image": "/images/lola-bunny.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Marvin the Martian",
+    "image": "/images/marvin-the-martian.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Michael Jordan",
+    "image": "/images/michael-jordan.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Mr. Swackhammer",
+    "image": "/images/mr-swackhammer.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Sylvester Pussycat",
+    "image": "/images/sylvester-pussycat.png"
+  },
+  {
+    "id": 10,
+    "name": "Tazmanian Devil",
+    "image": "/images/tazmanian-devil.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Tweety",
+    "image": "/images/tweety.gif"
+  },
+  {
+    "id": 12,
+    "name": "Yosemite Sam",
+    "image": "/images/yosemite-sam.jpg"
+  }
+]
