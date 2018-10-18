@@ -14,26 +14,44 @@ class App extends Component {
     message: ""
   };
 
-  handleClick = (id) => {
+  resetGame = () => {
+    this.shuffleCards(this.state.characters);
+    this.setState({
+      clickedCharactersId: [],
+      score: 0,
+      message: ""
+    });
+  };
 
-    for(let stateId of this.state.clickedCharactersId) {
-      if(stateId === id) {
+  shuffleCards = (array) => {
+    for(let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return this.setState({
+      characters: array
+    });
+  }
+
+  handleClick = (id) => {
+    console.log(this.state.clickedCharactersId);
+    if(this.state.clickedCharactersId.includes(id)) {
+  
         alert("You lose!");
+        this.resetGame();
         return;
-      }
     };
-    //push click id into clickedCharactersId array state if not already clicked
+    //push id into clickedCharactersId array state if not already clicked
     this.setState({
       clickedCharactersId: [...this.state.clickedCharactersId, id]
     });
-    console.log(this.state.clickedCharactersId);
-    
   };
-  // Map over this.state.friends and render a CharacterCard component for each character object
+
   render() {
     return (
-        <Wrapper>
+      <div>
         <Header />
+        <Wrapper>
           {this.state.characters.map(character => (
             <CharacterCard
               id={character.id}
@@ -44,6 +62,7 @@ class App extends Component {
             />
           ))}
         </Wrapper>
+      </div>
     );
   }
 

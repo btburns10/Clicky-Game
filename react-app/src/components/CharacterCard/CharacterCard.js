@@ -4,11 +4,9 @@ import "./CharacterCard.css";
 const CharacterCard = (props) => (
 
       <div className="row">
-      <div className="col s12 m3">
+      <div className="col s12 m4 lg3">
         <div onClick={() => props.handleClick(props.id)} className="card">
-          <div className="card-image image">
-            <img src={props.image} alt={props.name} />
-          </div>
+          <img src={props.image} alt={props.name} />
         </div>
       </div>
       </div>
