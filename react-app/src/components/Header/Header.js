@@ -4,7 +4,7 @@ import "./Header.css";
 const Header = () => (
   <nav>
     <div className="nav-wrapper">
-      <a href="/" className="brand-logo center">Space Jam Click Game</a>
+      <a href="/" className="brand-logo center">Space Jam <img src="/images/space-jam-logo.png" alt="space-jam"></img> Clicky Game</a>
       <ul className="left hide-on-med-and-down">
         <li className="active"><a href="collapsible.html">How To Play?</a></li>
       </ul>
