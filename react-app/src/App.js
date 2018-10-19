@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import Wrapper from "./components/Wrapper";
-import Header from "./components/Header";
+import Header from "./components/Header/Header";
 import CharacterCard from "./components/CharacterCard/CharacterCard";
 import characters from "./characters.json";
+import "./App.css";
 
 class App extends Component {
   //setting initial state
@@ -19,7 +20,7 @@ class App extends Component {
     this.setState({
       clickedCharactersId: [],
       score: 0,
-      message: ""
+      message: "Click any image to begin"
     });
   };
 
@@ -34,22 +35,30 @@ class App extends Component {
   }
 
   handleClick = (id) => {
-    console.log(this.state.clickedCharactersId);
+    //losing conditional logic
     if(this.state.clickedCharactersId.includes(id)) {
-  
         alert("You lose!");
         this.resetGame();
         return;
     };
     //push id into clickedCharactersId array state if not already clicked
     this.setState({
-      clickedCharactersId: [...this.state.clickedCharactersId, id]
+      clickedCharactersId: [...this.state.clickedCharactersId, id],
+      score: this.state.score + 1
     });
+    //winning conditional logic
+    if(this.state.score === 11) {
+      alert("you win!");
+      this.resetGame();
+      return;
+    }
+    //shuffle cards
+    this.shuffleCards(this.state.characters);
   };
 
   render() {
     return (
-      <div>
+      <div className="body">
         <Header />
         <Wrapper>
           {this.state.characters.map(character => (

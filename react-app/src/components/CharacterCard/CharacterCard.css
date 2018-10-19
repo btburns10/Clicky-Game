@@ -1,10 +1,10 @@
 .card {
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   box-shadow: 4px 4px 10px #999999;
 }
 
 img {
-  max-height: 240px;
-  max-width: 240px;
+  max-height: 190px;
+  max-width: 190px;
 }
