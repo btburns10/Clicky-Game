@@ -1,3 +1,13 @@
-.nav-wrapper {
-  background: grey;
+nav {
+  background: rgba(0, 0, 0, 0.6);
+  height: 80px;
+}
+
+.nav-wrapper .brand-logo {
+  font-size: 40px;
+  font-family: 'Sigmar One', 'cursive';
+}
+
+.right li a {
+  font-size: 24px;
 }

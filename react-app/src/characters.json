@@ -17,7 +17,7 @@
   {
     "id": 4,
     "name": "Elmer Fudd",
-    "image": "/images/elmer-fudd.jpg"
+    "image": "/images/elmer-fudd.png"
   },
   {
     "id": 5,
@@ -52,7 +52,7 @@
   {
     "id": 11,
     "name": "Tweety",
-    "image": "/images/tweety.gif"
+    "image": "/images/tweety.png"
   },
   {
     "id": 12,

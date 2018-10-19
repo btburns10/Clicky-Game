@@ -1,6 +1,6 @@
 .wrapper {
   padding-top: 20px;
-  background: #ECEFF1;
+  background-color: transparent;
   height: 100%;
   max-width: 60%;
   margin: 0 auto;
@@ -8,4 +8,5 @@
   flex-flow: row wrap;
   justify-content: space-around;
   overflow: auto;
+  z-index: 1;
 }
