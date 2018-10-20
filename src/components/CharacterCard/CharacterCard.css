@@ -1,12 +1,12 @@
 .card {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   box-shadow: 4px 4px 10px #999999;
 }
 
 img {
-  max-height: 190px;
-  max-width: 190px;
+  max-height: 145px;
+  max-width: 145px;
 }
 
 .grow { 
