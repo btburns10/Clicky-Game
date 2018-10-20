@@ -8,5 +8,4 @@
   flex-flow: row wrap;
   justify-content: space-around;
   overflow: auto;
-  z-index: 1;
 }

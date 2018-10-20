@@ -20,7 +20,8 @@ class App extends Component {
     this.setState({
       clickedCharactersId: [],
       score: 0,
-      message: "Click any image to begin"
+      highScore: this.state.score > this.state.highScore ? this.state.score : this.state.highScore,
+      message: "Incorrect!"
     });
   };
 
@@ -37,14 +38,14 @@ class App extends Component {
   handleClick = (id) => {
     //losing conditional logic
     if(this.state.clickedCharactersId.includes(id)) {
-        alert("You lose!");
         this.resetGame();
         return;
     };
-    //push id into clickedCharactersId array state if not already clicked
+    //correct guess logic
     this.setState({
       clickedCharactersId: [...this.state.clickedCharactersId, id],
-      score: this.state.score + 1
+      score: this.state.score + 1,
+      message: "Correct!"
     });
     //winning conditional logic
     if(this.state.score === 11) {
@@ -59,7 +60,10 @@ class App extends Component {
   render() {
     return (
       <div className="body">
-        <Header />
+        <Header 
+          score={this.state.score} 
+          highScore={this.state.highScore}
+          message={this.state.message}/>
         <Wrapper>
           {this.state.characters.map(character => (
             <CharacterCard

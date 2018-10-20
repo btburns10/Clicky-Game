@@ -2,10 +2,17 @@
   width: 200px;
   height: 200px;
   box-shadow: 4px 4px 10px #999999;
-  z-index: 10;
 }
 
 img {
   max-height: 190px;
   max-width: 190px;
+}
+
+.grow { 
+  transition: all .2s ease-in-out;
+}
+
+.grow:hover {
+  transform: scale(1.05);
 }
