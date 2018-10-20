@@ -11,12 +11,12 @@ const customStyle = {
   content: {
     fontSize: 30,
     fontFamily: 'Sigmar One',
-    top                   : '50%',
+    top                   : '40%',
     left                  : '50',
     right                 : 'auto',
     bottom                : 'auto',
     marginRight           : '-50%',
-    transform             : 'translate(25%, -50%)'
+    transform             : 'translate(5%, -50%)'
   }
 };
 
