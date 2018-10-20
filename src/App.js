@@ -12,17 +12,19 @@ class App extends Component {
     clickedCharactersId: [],
     score: 0,
     highScore: 0,
-    message: ""
+    message: "Click an image to begin!",
+    shake: ""
   };
 
   resetGame = () => {
-    this.shuffleCards(this.state.characters);
     this.setState({
       clickedCharactersId: [],
       score: 0,
       highScore: this.state.score > this.state.highScore ? this.state.score : this.state.highScore,
-      message: "Incorrect!"
+      message: "Click an image to begin!",
+      shake: ""
     });
+    this.shuffleCards(this.state.characters);
   };
 
   shuffleCards = (array) => {
@@ -35,10 +37,28 @@ class App extends Component {
     });
   }
 
+  handleWin = () => {
+    this.setState({
+      clickedCharactersId: [],
+      score: 0,
+      highScore: 12,
+      message: "Congratulations, You Win!"
+    });
+    setTimeout(this.resetGame, 4000);
+  };
+
+  handleLoss = () => {
+    this.setState({
+      message: "Incorrect!",
+      shake: "shake"
+    });
+    setTimeout(this.resetGame, 2500);
+  };
+
   handleClick = (id) => {
     //losing conditional logic
     if(this.state.clickedCharactersId.includes(id)) {
-        this.resetGame();
+        this.handleLoss();
         return;
     };
     //correct guess logic
@@ -49,8 +69,7 @@ class App extends Component {
     });
     //winning conditional logic
     if(this.state.score === 11) {
-      alert("you win!");
-      this.resetGame();
+      this.handleWin();
       return;
     }
     //shuffle cards
@@ -64,7 +83,7 @@ class App extends Component {
           score={this.state.score} 
           highScore={this.state.highScore}
           message={this.state.message}/>
-        <Wrapper>
+        <Wrapper className={this.state.shake}>
           {this.state.characters.map(character => (
             <CharacterCard
               id={character.id}
