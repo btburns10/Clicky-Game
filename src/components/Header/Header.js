@@ -10,12 +10,13 @@ const customStyle = {
   },
   content: {
     fontSize: 30,
+    fontFamily: 'Sigmar One',
     top                   : '50%',
     left                  : '50',
     right                 : 'auto',
     bottom                : 'auto',
     marginRight           : '-50%',
-    transform             : 'translate(50%, -50%)'
+    transform             : 'translate(25%, -50%)'
   }
 };
 
@@ -45,11 +46,11 @@ class Header extends React.Component {
         <div className="nav-wrapper">
           <a href="/" className="brand-logo center">Space Jam <img src="/images/space-jam-logo.png" alt="space-jam"></img> Clicky Game</a>
           <ul className="left hide-on-med-and-down">
-            <li className="active"><p onClick={this.toggleModal}>How To Play?</p></li>
+            <li className="active"><span onClick={this.toggleModal}>How To Play?</span></li>
             <Modal isOpen={this.state.isActive} style={customStyle}>
               <p>The goal of this game is to click all 12 of the character cards.</p>  
               <p>The tricky part - You can not click on any card twice!</p>
-              <button onClick={this.toggleModal}>Ok Got It!</button>
+              <button onClick={this.toggleModal} className="btn">Ok Got It!</button>
             </Modal>
           </ul>
           <ul className="right hide-on-med-and-down">

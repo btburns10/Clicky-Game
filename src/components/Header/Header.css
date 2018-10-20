@@ -8,11 +8,11 @@ nav {
   font-family: 'Sigmar One', 'cursive';
 }
 
-.nav-wrapper p {
+.nav-wrapper span {
   padding-left: 25px;
 }
 
-.nav-wrapper p:hover {
+.nav-wrapper span:hover {
   cursor: pointer;
 }
 
