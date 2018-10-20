@@ -8,6 +8,14 @@ nav {
   font-family: 'Sigmar One', 'cursive';
 }
 
+.nav-wrapper p {
+  padding-left: 25px;
+}
+
+.nav-wrapper p:hover {
+  cursor: pointer;
+}
+
 .right li a {
   font-size: 24px;
 }
