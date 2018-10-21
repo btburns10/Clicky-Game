@@ -12,7 +12,7 @@ const customStyle = {
     fontSize: 30,
     fontFamily: 'Sigmar One',
     top                   : '40%',
-    left                  : '30',
+    left                  : '6%',
     right                 : 'auto',
     bottom                : 'auto',
     marginRight           : '-50%',
